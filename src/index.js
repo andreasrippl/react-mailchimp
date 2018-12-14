@@ -50,13 +50,15 @@ class Mailchimp extends React.Component {
             defaultValue={this.state[input.name]}
           />
         )}
-        <button
-          disabled={status === "sending" || status === "success"}
-          type="submit"
-          className={buttonClassName}
-        >
-          {messages.button}
-        </button>
+        <div className='submitbutton'>
+          <button
+            disabled={status === "sending" || status === "success"}
+            type="submit"
+            className={buttonClassName}
+          >
+            {messages.button}
+          </button>
+        </div>
         <div className='msg-alert'>
           {status === "sending" && <p style={styles.sendingMsg}>{messages.sending}</p>}
           {status === "success" && <p style={styles.successMsg}>{messages.success}</p>}

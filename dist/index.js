@@ -157,7 +157,7 @@
           "form",
           { onSubmit: this.handleSubmit.bind(this), className: className },
           fields.map(function (input) {
-            return _react2.default.createElement("input", { key: Math.random(),
+            return _react2.default.createElement("input", { key: input.name,
               onBlur: function onBlur(_ref) {
                 var target = _ref.target;
                 return _this4.setState(_defineProperty({}, input.name, target.value));
